@@ -80,7 +80,7 @@ C:\Users\yasser\Desktop\Winterfell>All-Winterfell-Scripts.bat
 ```
 
 # Demo of Execution
-below two animated GIFs to domenstrate a demo of execution and results data as the following:
+below are two animated GIFs to domenstrate a demo of execution and results data as the following:
 
 **Run Winterfell Package**
 ![Run_Winterfell](https://github.com/yasser-alghamdi/winterfell/blob/master/winterfell.gif?raw=true)
