@@ -79,7 +79,7 @@ Command:
 C:\Users\yasser\Desktop\Winterfell>All-Winterfell-Scripts.bat
 ```
 
-# Demo of Execution
+## Demo of Execution
 below are two animated GIFs to domenstrate a demo of execution and results data as the following:
 
 **Run Winterfell Package**
@@ -88,7 +88,7 @@ below are two animated GIFs to domenstrate a demo of execution and results data 
 **Search Through Results**
 ![Results](https://github.com/yasser-alghamdi/winterfell/blob/master/results.gif?raw=true)
 
-# References
+## References
 
 https://ericzimmerman.github.io/#!index.md
 
