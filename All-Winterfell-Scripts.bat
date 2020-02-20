@@ -18,10 +18,6 @@
 	REM  ==========================================(WINTERFELL SCRIPTS)====================================================================================
 	title Winterfell (Windows Forensics Data Collection and Threat Hunting)
     
-    ::REM Get the tools directory path	
-	::set runpath=%1
-    ::REM Get the tools directory output
-	::set resultspath=%2
 	pushd %~dp0
 	start Winterfell-System.bat
 	start Winterfell-Forensics.bat
