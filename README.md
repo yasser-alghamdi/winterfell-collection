@@ -85,7 +85,7 @@ below are two animated GIFs to domenstrate a demo of execution and results data 
 **Run Winterfell Package**
 ![Run_Winterfell](https://github.com/yasser-alghamdi/winterfell/blob/master/winterfell.gif?raw=true)
 
-**Data Nivigation**
+**Data Navigation**
 ![Results](https://github.com/yasser-alghamdi/winterfell/blob/master/results.gif?raw=true)
 
 ## References
