@@ -1,4 +1,4 @@
-<img src="https://github.com/yasser-alghamdi/winterfell/blob/master/winterfell_logo.jpg" title="winterfell" height="40%" width="40%">
+<img src="https://github.com/yasser-alghamdi/winterfell/blob/master/winterfell_logo.jpg" title="winterfell" height="30%" width="40%">
 
 # Winterfell
 Winterfell are a group of windows batch scripts to collect windows forensics data and perform threat hunting activities for Incident Response Investigation.
