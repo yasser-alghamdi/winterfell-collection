@@ -76,7 +76,7 @@ $$  /   \$$ |$$$$$$\ $$ | \$$ |   $$ |   $$$$$$$$\ $$ |  $$ |$$ |      $$$$$$$$\
 
 ----------------------------------------------------
 Command:
-C:\Users\yasser\Desktop\Winterfell>All-Winterfell-Scripts.bat
+C:\Users\yasser\Desktop\winterfell-master>All-Winterfell-Scripts.bat
 ```
 
 ## Demo of Execution
