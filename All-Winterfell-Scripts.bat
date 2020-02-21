@@ -19,6 +19,7 @@
 	title Winterfell (Windows Forensics Data Collection and Threat Hunting)
     
 	pushd %~dp0
+	unzip.exe tools.zip
 	start Winterfell-System.bat
 	start Winterfell-Forensics.bat
 	start Winterfell-Network.bat
