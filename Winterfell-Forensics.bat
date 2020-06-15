@@ -112,7 +112,7 @@
 	GOTO END
 	:END
 	%AMPR% -f "%resultspath%\Amcache\Amcache.hve" ^
-		--csv %resultspath%\Amcache 2>&1
+		--csv %resultspath%\Amcache\ 2>&1
 	echo %date% %time% : Finished enumerating amcache hive ^
 		>> %resultspath%\Winterfell_Status.log
 	
