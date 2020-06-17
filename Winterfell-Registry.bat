@@ -134,4 +134,3 @@
 		>> %resultspath%\Winterfell_Status.log
 	echo 
 	echo Please Enter Any Key to Exit ...
-
