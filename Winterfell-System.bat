@@ -34,11 +34,8 @@
 		>> %resultspath%\Winterfell_Status.log
 	mkdir %resultspath%\Userinformation
 	echo User: %username%>%resultspath%\Userinformation\userinfo.txt
-	echo ================================================================================ ^
-		>> %resultspath%\Userinformation\userinfo.txt
+	echo [+] user account information >> %resultspath%\Userinformation\userinfo.txt
 	wmic useraccount get name,sid >> %resultspath%\Userinformation\userinfo.txt 2>&1
-	echo ================================================================================ ^
-		>> %resultspath%\Userinformation\userinfo.txt
 	echo %DATE% %TIME% : Finished enumerating usernames-and-SID information ^
 		>> %resultspath%\Winterfell_Status.log
 	
@@ -55,56 +52,39 @@
 	echo %date% %time% : Enumerating system information ^
 		>> %resultspath%\Winterfell_Status.log
 	mkdir %resultspath%\System
-	echo ===========================(shows computer name)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows computer name >> %resultspath%\System\systeminfo.txt
 	echo System Information: %COMPUTERNAME% > %resultspath%\System\systeminfo.txt
-	echo ===========================(shows date and time)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows date and time >> %resultspath%\System\systeminfo.txt
 	echo Date and Time: %DATE% %TIME% >> %resultspath%\System\systeminfo.txt
-	echo ===========================(shows services hosted in each process)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows services hosted in each process >> %resultspath%\System\systeminfo.txt
 	systeminfo >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows boot configuration management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows boot configuration management >> %resultspath%\System\systeminfo.txt
 	wmic BOOTCONFIG >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows DCOM application management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+} shows DCOM application management >> %resultspath%\System\systeminfo.txt
 	wmic DCOMAPP >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows environment details)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows environment details >> %resultspath%\System\systeminfo.txt
 	wmic ENVIRONMENT >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows scheduled jobs)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows scheduled jobs >> %resultspath%\System\systeminfo.txt
 	wmic JOB >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows service application management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows service application management >> %resultspath%\System\systeminfo.txt
 	wmic service >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows process management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows process management >> %resultspath%\System\systeminfo.txt
 	wmic process >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows quikc fix engineering)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows quikc fix engineering >> %resultspath%\System\systeminfo.txt
 	wmic QFE >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows automatic running commands management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows automatic running commands management >> %resultspath%\System\systeminfo.txt
 	wmic startup >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows active network connection management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows active network connection management >> %resultspath%\System\systeminfo.txt
 	wmic netuse >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows NT domain management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows NT domain management >> %resultspath%\System\systeminfo.txt
 	wmic NTDOMAIN >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows system accounts management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows system accounts management >> %resultspath%\System\systeminfo.txt
 	wmic SYSACCOUNT >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows system drivers managament)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows system drivers managament >> %resultspath%\System\systeminfo.txt
 	wmic SYSDRIVER >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows shared resources management)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows shared resources management >> %resultspath%\System\systeminfo.txt
 	wmic SHARE >> %resultspath%\System\systeminfo.txt 2>&1
-	echo ===========================(shows installed software and version)======================= ^
-		>> %resultspath%\System\systeminfo.txt
+	echo [+] shows installed software and version >> %resultspath%\System\systeminfo.txt
 	wmic product get name,version >> %resultspath%\System\systeminfo.txt 2>&1
 	echo %DATE% %TIME% : Finished enumerating system information ^
 		>> %resultspath%\Winterfell_Status.log
@@ -129,8 +109,6 @@
 	echo on Computer: %COMPUTERNAME% ^
 		>> %resultspath%\Environment\envvariables.txt
 	echo Current Date and Time: %DATE% %TIME% ^
-		>> %resultspath%\Environment\envvariables.txt
-	echo ============================================================= ^
 		>> %resultspath%\Environment\envvariables.txt
 	set >> %resultspath%\Environment\envvariables.txt
 	echo %DATE% %TIME% : Finished Enumerating Environment Variable Settings ^
@@ -167,7 +145,7 @@
 	echo Enumerating the group policy .........................!
 	echo %date% %time% : Enumerating the group policy ^
 		>> %resultspath%\Winterfell_Status.log
-	xcopy /S /C /H /Y %windir%\System32\GroupPolicy ^
+	xcopy /S /C /H /Y “%windir%\System32\GroupPolicy” ^
 		%resultspath%\Policies\grouppolicy.txt 2>&1
 	gpresult /z > %resultspath%\Policies\grouppolicy.txt 2>&1
 	echo %date% %time% : Finished enumerating the group policy ^
@@ -178,28 +156,22 @@
 	echo %date% %time% : Enumerating security products information ^
 		>> %resultspath%\Winterfell_Status.log
 	mkdir %resultspath%\Secproduct
-	echo ===========================(AV product details)======================= ^
-		>> %resultspath%\Secproduct\secproinfo.txt
+	echo [+] AV product details >> %resultspath%\Secproduct\secproinfo.txt
 	WMIC /Node:localhost /Namespace:\\root\SecurityCenter  Path AntiVirusProduct ^
 		>> %resultspath%\Secproduct\secproinfo.txt 2>&1
-	echo ===========================(AV product details)======================= ^
-		>> %resultspath%\Secproduct\secproinfo.txt
+	echo [+] AV product details >> %resultspath%\Secproduct\secproinfo.txt
 	WMIC /Node:localhost /Namespace:\\root\SecurityCenter2  Path AntiVirusProduct ^
 		>> %resultspath%\Secproduct\secproinfo.txt 2>&1
-	echo ===========================(FW product details)======================= ^
-		>> %resultspath%\Secproduct\secproinfo.txt
+	echo [+] (FW product details >> %resultspath%\Secproduct\secproinfo.txt
 	WMIC /Node:localhost /Namespace:\\root\SecurityCenter  Path FirewallProduct ^
 		>> %resultspath%\Secproduct\secproinfo.txt 2>&1
-	echo ===========================(FW product details)======================= ^
-		>> %resultspath%\Secproduct\secproinfo.txt
+	echo [+] FW product details >> %resultspath%\Secproduct\secproinfo.txt
 	WMIC /Node:localhost /Namespace:\\root\SecurityCenter2  Path FirewallProduct ^
 		>> %resultspath%\Secproduct\secproinfo.txt 2>&1
-	echo ===========================(AntiSpyware product details)======================= ^
-		>> %resultspath%\Secproduct\secproinfo.txt
+	echo [+] AntiSpyware product details >> %resultspath%\Secproduct\secproinfo.txt
 	WMIC /Node:localhost /Namespace:\\root\SecurityCenter  Path AntiSpywareProduct  Get ^
 		>> %resultspath%\Secproduct\secproinfo.txt 2>&1
-	echo ===========================(AntiSpyware product details)======================= ^
-		>> %resultspath%\Secproduct\secproinfo.txt
+	echo [+] AntiSpyware product details >> %resultspath%\Secproduct\secproinfo.txt
 	WMIC /Node:localhost /Namespace:\\root\SecurityCenter2  Path AntiSpywareProduct  Get ^
 		>> %resultspath%\Secproduct\secproinfo.txt 2>&1
 	echo %date% %time% : Finished enumerating security product information ^
