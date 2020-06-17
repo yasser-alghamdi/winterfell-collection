@@ -58,4 +58,3 @@
 	echo %date% %time% : Winterfell-Location Operation is Completed ^
 		>> %resultspath%\Winterfell_Status.log
 	echo Please Enter Any Key to Exit ...
-
