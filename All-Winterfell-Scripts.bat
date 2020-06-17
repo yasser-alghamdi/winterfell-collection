@@ -30,5 +30,3 @@
 	start Winterfell-Logs.bat
 	start Winterfell-Location.bat
 	popd
-	
-	
