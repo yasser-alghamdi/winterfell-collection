@@ -171,13 +171,3 @@
 	echo %date% %time% : Winterfell-Logs Operation is Completed ^
 		>> %resultspath%\Winterfell_Status.log 
 	echo Please Enter Any Key to Exit ...
-
-
-
-
-
-
-
-
-
-
