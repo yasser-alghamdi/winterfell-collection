@@ -27,7 +27,7 @@
 	set PREF32=%toolspath%\prefetch\WinPrefetchView-32.exe
 	set RCOP64=%toolspath%\rawcopy\RawCopy-64.exe
 	set RCOP32=%toolspath%\rawcopy\RawCopy-32.exe
-	set AMPR=%toolspath%\amcache\AmcacheParser.exe
+	set CHPR=%toolspath%\amcache\AppCompatCacheParser.exe
 	set RECM=%toolspath%\registryexplorer\RECmd.exe
 	set SBCM=%toolspath%\shellbags\SBECmd.exe
 	set USJR=%toolspath%\usnjrnl\journal.exe
@@ -110,8 +110,7 @@
 	)
 	GOTO END
 	:END
-	%AMPR% -f "%resultspath%\Amcache\Amcache.hve" ^
-		--csv %resultspath%\Amcache\ 2>&1
+	%CHPR% --csv %resultspath%\Amcache\AppCompat\ 2>&1
 	echo %date% %time% : Finished enumerating amcache hive ^
 		>> %resultspath%\Winterfell_Status.log
 	
