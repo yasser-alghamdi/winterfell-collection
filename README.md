@@ -1,7 +1,7 @@
 <img src="https://github.com/yasser-alghamdi/winterfell/blob/master/winterfell_logo.jpg" title="winterfell" height="15%" width="35%">
 
 # Winterfell
-Winterfell are a group of windows batch scripts to collect windows forensics data and perform efficient, and fast incident response and threat hunting activities.
+Winterfell is a group of windows batch scripts to collect windows forensics data and perform efficient, and fast incident response and threat hunting activities.
 
 ## Winterfell Package
 Winterfell contains various batch scripts which are `Winterfell-System.bat` `Winterfell-Forensics.bat` `Winterfell-Network.bat` `Winterfell-Registry.bat` `Winterfell-Presistance.bat` `Winterfell-Malware.bat` `Winterfell-Web.bat` `Winterfell-Logs.bat` and `Winterfell-Location.bat`
